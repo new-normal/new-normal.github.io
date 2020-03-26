@@ -40,6 +40,10 @@
             background-color: #2CBFFE !important;
         }
 
+        .navbar {
+            padding: 0 0.5rem;
+        }
+
         .logo {
             width: 70px;
         }
@@ -72,9 +76,10 @@
             padding-top:5px;
         }
 
-        .carousel-caption a{
+        .carousel-caption {
             color: #2CBFFE;
-            font-size: 3rem;
+            background: rgba(255,255,255,0.8);
+
         }
 
         #protected {
@@ -88,10 +93,34 @@
         }
 
         @media screen and (max-width : 576px)   {
+
+            h1,h2,h3,h4,h5,h6 {
+                font-size: 1.5em;
+            }
+
+            .carousel-caption {
+                margin: 0;
+                padding: 0;
+                right: 0;
+                left: 0;
+            }
+
+            #protected li, li {
+                font-size: 0.9em;
+            }
+
             #protected {
                 border-radius: 15px;
                 margin: 20px 0;
                 padding-inline-start:40px;
+            }
+
+            .logo {
+                width: 50px;
+            }
+
+            footer p {
+                font-size: 80%;
             }
         }
 
@@ -132,17 +161,19 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <a href="https://www.covidlove.com/"><img class="d-block w-100" src="IMG/covid-love-slide.png" alt="First slide">
-      <div class="carousel-caption d-none d-md-block">
-            <h1>Love in the Time of Covid</a></h1>
-            <p>...</p>
+      <a href="https://www.covidlove.com/"><img class="d-block w-100" src="IMG/covid-love-slide.png" alt="Love in the time of covid" target="_blank">
+      <div class="carousel-caption">
+            <h2>Love in the Time of Covid</h2>
         </div></a>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="IMG/fantastic-fungi-day.jpg" alt="Second slide">
+      <a href="https://fantasticfungi.com/connect/"><img class="d-block w-100" src="IMG/fantastic-fungi-day.jpg" alt="Second slide" target="_blank"></a>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="IMG/3d-printed-mask.png" alt="Third slide">
+      <img class="d-block w-100" src="IMG/3d-printed-mask2.jpg" alt="Third slide">
+      <div class="carousel-caption">
+            <h2>Help 3D Print Masks</h2>
+        </div>
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
