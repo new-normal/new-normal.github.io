@@ -18,10 +18,17 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
 	<!-- Google Fonts -->
- 	<link href="https://fonts.googleapis.com/css?family=Arapey:400,400i&display=swap" rel="stylesheet">
-
+ 	<link href="https://fonts.googleapis.com/css?family=Arapey|Gotu|Lato&display=swap" rel="stylesheet">
     
     <style>
+
+        h1,h2,h3,h4,h5,h6 {
+            font-family: 'Gotu', sans-serif;
+        }
+
+        p, li {
+            font-family: 'Lato', serif;
+        }
 
         a,a:hover {
             color: black;
@@ -30,6 +37,7 @@
 
         .nav-link {
             text-decoration: none;
+            font-family: 'Gotu', sans-serif;
         }
 
         .navbar-light .navbar-nav .nav-link {
@@ -76,13 +84,18 @@
             padding-top:5px;
         }
 
+        footer p {
+            font-family: 'Gotu', sans-serif;
+        }
+
         .carousel-caption {
+            font-family: 'Arapey',sans-serif;
             color: #2CBFFE;
             background: rgba(255,255,255,0.8);
 
         }
 
-        #protected {
+        .protected {
             background: #2bbffe;
             color: white;
             padding: 20px;
@@ -100,7 +113,7 @@
 
             .carousel-caption {
                 margin: 0;
-                padding: 0;
+                padding: 10px 0;
                 right: 0;
                 left: 0;
             }
@@ -187,6 +200,7 @@
 </div>
 
 <div class="container">
+    <br/>
 
     <a name="events"></a><h1>Virtual Events</h1>
 
@@ -242,7 +256,7 @@
     
 
     <a name="self-care"></a><h1>Self-care</h1>
- <ul id="protected">
+ <ul class="protected">
         <h3>Stay Protected in Quarantine</h3>
 
         <li>Socially distance six feet from other people and don't gather during quarantine.</li>
