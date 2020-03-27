@@ -36,10 +36,12 @@
         a,a:hover {
             color: black;
             font-weight: bolder;
+            padding-bottom: 2px;
+            border-bottom: 1px dashed grey;
         }
 
         .nav-link {
-            text-decoration: none;
+            border-bottom: 0;
             font-family: 'Gotu', sans-serif;
         }
 
@@ -56,6 +58,10 @@
 
         .navbar {
             padding: 0 0.5rem;
+        }
+
+        .navbar-brand {
+            border-bottom: 0;
         }
 
         .nav-down {
@@ -165,7 +171,11 @@
 
         @media screen and (max-width : 576px)   {
 
-            h1,h2,h3,h4,h5,h6 {
+            h1 {
+                font-size: 2em;
+            }
+
+            h2,h3,h4,h5,h6 {
                 font-size: 1.5em;
             }
 
