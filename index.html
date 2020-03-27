@@ -33,15 +33,19 @@
             font-family: 'Lato', serif;
         }
 
-        a,a:hover {
+        section a,section a:hover {
             color: black;
             font-weight: bolder;
             padding-bottom: 2px;
             border-bottom: 1px dashed grey;
+            text-decoration: none;
+        }
+
+        .dark-mode section a:hover {
+            color: white;
         }
 
         .nav-link {
-            border-bottom: 0;
             font-family: 'Gotu', sans-serif;
         }
 
@@ -58,10 +62,6 @@
 
         .navbar {
             padding: 0 0.5rem;
-        }
-
-        .navbar-brand {
-            border-bottom: 0;
         }
 
         .nav-down {
@@ -126,7 +126,7 @@
         .carousel-caption {
             font-family: 'Arapey',sans-serif;
             color: #2CBFFE;
-            background: #2CBFFE;
+            background: #2cbffed4;
 
         }
 
@@ -149,11 +149,24 @@
             color: white;
             background: grey;
             text-align: center;
-            height: 40px;
-            padding-top:10px;
-            font-size: 80%;
+            height: 50px;
+            padding-top:12px;
+            font-size: 90%;
             font-weight: 100;
         }
+
+
+        .dark-mode {
+          background: #1f1f20;
+          color: white;
+          transition: 0.5s ease-in-out;
+        }
+
+        .dark-mode a, .dark-mode p, .dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4, .dark-mode ul {
+          color: white;
+          transition: 0.2s ease-in-out;
+        }
+
 
         @media screen and (min-width : 992px)   {
 
@@ -425,10 +438,6 @@
     </div>
 </section>
 
-<!-- Snackbar DarkMode confirmation -->
-<div id="darkModeOn"><img src="IMG/Icons/darkMoon.png" id="moonIconSnackbar"/><strong>Dark Mode</strong> is enabled. Your preference is saved.</div>
-<div id="darkModeOff"><strong>Dark Mode</strong> is disabled. Your preference is saved.</div>
-
 <footer>
 
     <p>Breathe. This too shall pass. <a href="http://open.spotify.com/user/recalcitrantid/playlist/3ODnsWjOJeD9xgcEbMcyVW" target="_blank"><img src="IMG/play3.png" alt="Play spotify playlist covid beats"/ style="height: 25px"></a></P>
@@ -450,10 +459,6 @@
     <script>
     	const observer = lozad();
 		observer.observe();
-    </script>
-
-    <!-- Dark Mode -->
-    <script src="JS/dark-mode.js">
     </script>
 
     <script>
