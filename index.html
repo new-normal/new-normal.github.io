@@ -75,6 +75,13 @@
             font-size:80%;
         }
 
+        a.anchor {
+            display: block;
+            position: relative;
+            top: -10px;
+            visibility: hidden;
+        }
+
         body {
         }
 
@@ -88,6 +95,10 @@
             height: 40px;
             padding-top:5px;
             transition:.3s ease-in-out;
+        }
+
+        section {
+            margin-top: 50px;
         }
 
         .footer-down {
@@ -138,13 +149,17 @@
             font-weight: 100;
         }
 
-        @media screen and (min-width : 577px)   {
+        @media screen and (min-width : 992px)   {
 
             html {
                 margin-top:80px;
             }
             #nav-BG {
                 position: fixed;
+            }
+
+            a.anchor {
+                top: -80px;
             }
         }
 
@@ -250,7 +265,7 @@
 <div class="container">
     <br/>
 <section>
-    <a name="events"></a><h1>Virtual Events</h1>
+    <a class="anchor" name="events"></a><h1>Virtual Events</h1>
 
     <h4><a href="https://stonesoup.live/virtual">Stone Soup Virtual</a></h4>
 
@@ -269,7 +284,7 @@
 </section>
 <section>
 
-    <a name="help"></a><h1>How to Help</h1>
+    <a class="anchor" name="help"></a><h1>How to Help</h1>
 
     <h3>Donate your money</h3>
     <ul>
@@ -313,7 +328,7 @@
 </section>
 <section>
 
-    <a name="self-care"></a><h1>Self-care</h1>
+    <a class="anchor" name="self-care"></a><h1>Self-care</h1>
 
     <h3>Daily Quarantine Questions</h3>
 
@@ -350,7 +365,7 @@
   </section>
   <section> 
 
-    <a name="info"></a><h2>COVID-19 Resources</h2>
+    <a class="anchor" name="info"></a><h2>COVID-19 Resources</h2>
 
     <p><ul><li><a href="https://www.cdc.gov/coronavirus/2019-ncov/index.html">CDC.gov</a></li></ul></p>
 
