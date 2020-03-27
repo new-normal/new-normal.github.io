@@ -22,6 +22,9 @@
     
     <style>
 
+        html {
+        }
+
         h1,h2,h3,h4,h5,h6 {
             font-family: 'Gotu', sans-serif;
         }
@@ -46,10 +49,20 @@
 
         #nav-BG {
             background-color: #2CBFFE !important;
+            width: 100%;
+            transition:.3s ease-in-out;
+            z-index: 999;
         }
 
         .navbar {
             padding: 0 0.5rem;
+        }
+
+        .nav-down {
+            top:0px;
+        }
+        .nav-up {
+            top:-80px;
         }
 
         .logo {
@@ -62,15 +75,7 @@
             font-size:80%;
         }
 
-        .spotify {
-            position: fixed;
-            left: 0px;
-            bottom: 30px;
-            z-index: 999;
-          }
-
         body {
-            padding-bottom: 40px;
         }
 
         footer {
@@ -82,16 +87,29 @@
             width: 100%;
             height: 40px;
             padding-top:5px;
+            transition:.3s ease-in-out;
+        }
+
+        .footer-down {
+            bottom:-80px;
+        }
+
+        .footer-up {
+            bottom:0;
         }
 
         footer p {
             font-family: 'Gotu', sans-serif;
         }
 
+        .carousel {
+            z-index: 1;
+        }
+
         .carousel-caption {
             font-family: 'Arapey',sans-serif;
             color: #2CBFFE;
-            background: rgba(255,255,255,0.8);
+            background: #2CBFFE;
 
         }
 
@@ -103,6 +121,31 @@
             border-radius: 30px;
             max-width: 700px;
             margin: 30px 0;
+        }
+
+        #credits a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        #credits {
+            color: white;
+            background: grey;
+            text-align: center;
+            height: 40px;
+            padding-top:10px;
+            font-size: 80%;
+            font-weight: 100;
+        }
+
+        @media screen and (min-width : 577px)   {
+
+            html {
+                margin-top:80px;
+            }
+            #nav-BG {
+                position: fixed;
+            }
         }
 
         @media screen and (max-width : 576px)   {
@@ -139,9 +182,12 @@
 
     </style>
 
+    <!--     Dark Mode -->    
+    <link rel="stylesheet" href="CSS/dark-mode.css" media="screen">
+
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav-BG">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light nav-down" id="nav-BG">
     <div class="container">
 	  <a class="navbar-brand" href="#"><img class="logo" src="IMG/new-normal-logo.png" /></a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -203,7 +249,7 @@
 
 <div class="container">
     <br/>
-
+<section>
     <a name="events"></a><h1>Virtual Events</h1>
 
     <h4><a href="https://stonesoup.live/virtual">Stone Soup Virtual</a></h4>
@@ -220,8 +266,8 @@
         </ul>
     </p>
 
-     
-
+</section>
+<section>
 
     <a name="help"></a><h1>How to Help</h1>
 
@@ -264,7 +310,8 @@
             <li>YouTube — <a href="https://www.youtube.com/watch?v=4FB--BOyTiU">How to Sew a Medical Face Mask Tutorial</a></li>
         </ul>
 
-    
+</section>
+<section>
 
     <a name="self-care"></a><h1>Self-care</h1>
 
@@ -300,7 +347,8 @@
         <li><a href="https://www.slideshare.net/InSTEDD/pandemic-preparedness-covid19-update-citizens-guide">Pandemic Preparedness COVID-19 Update – Citizens Guide <span class="date">(Mar. 11)</span></a></li>
     </ul>
 
-   
+  </section>
+  <section> 
 
     <a name="info"></a><h2>COVID-19 Resources</h2>
 
@@ -344,6 +392,18 @@
     </ul>
 
 </div>
+</section>
+
+<section id="credits">
+    <div class="container">
+        <p>Made with love by <a href="https://nuanced.design">Nuanced Design</a>.</p>
+    </div>
+</section>
+
+<!-- Snackbar DarkMode confirmation -->
+<div id="darkModeOn"><img src="IMG/Icons/darkMoon.png" id="moonIconSnackbar"/><strong>Dark Mode</strong> is enabled. Your preference is saved.</div>
+<div id="darkModeOff"><strong>Dark Mode</strong> is disabled. Your preference is saved.</div>
+
 <footer>
 
     <p>Breathe. This too shall pass. <a href="http://open.spotify.com/user/recalcitrantid/playlist/3ODnsWjOJeD9xgcEbMcyVW" target="_blank"><img src="IMG/play3.png" alt="Play spotify playlist covid beats"/ style="height: 25px"></a></P>
@@ -366,5 +426,73 @@
     	const observer = lozad();
 		observer.observe();
     </script>
+
+    <!-- Dark Mode -->
+    <script src="JS/dark-mode.js">
+    </script>
+
+    <script>
+
+
+    
+// HIDE NAV WHILE SCROLLING DOWN
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = $('#nav-BG').outerHeight();
+
+$(window).scroll(function(event){
+    didScroll = true;
+});
+
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
+
+function hasScrolled() {
+    var st = $(this).scrollTop();
+    
+    // Make sure they scroll more than delta
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+    
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (st > lastScrollTop && st > navbarHeight){
+        // Scroll Down
+        $('#nav-BG').removeClass('nav-down').addClass('nav-up');
+        $('footer').removeClass('footer-up').addClass('footer-down');
+            
+    } else {
+        // Scroll Up
+        if(st + $(window).height() < $(document).height()) {
+            $('#nav-BG').removeClass('nav-up').addClass('nav-down');
+            $('footer').removeClass('footer-down').addClass('footer-up');
+        }
+    }
+    
+    lastScrollTop = st;
+}
+
+// // Dark Mode detector
+    var time = new Date();
+    var hour = time.getHours();
+    if ( sessionStorage.getItem('setDarkMode') === 'true') {
+          document.body.classList.add("dark-mode");
+        }
+    else if ( sessionStorage.getItem('setDarkMode') === 'false') {
+        document.body.classList.remove("dark-mode");
+    }
+    else if ((hour <= 8) || (hour >= 17)) {
+        document.body.classList.add("dark-mode");
+    }
+    else {
+      document.body.classList.remove("dark-mode");
+    }
+    </script>
+
   </body>
 </html>
