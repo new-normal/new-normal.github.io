@@ -107,6 +107,10 @@
             margin-top: 50px;
         }
 
+        section#first {
+            margin-top: 20px;
+        }
+
         .footer-down {
             bottom:-80px;
         }
@@ -220,9 +224,6 @@
 
     </style>
 
-    <!--     Dark Mode -->    
-    <link rel="stylesheet" href="CSS/dark-mode.css" media="screen">
-
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light nav-down" id="nav-BG">
@@ -286,8 +287,7 @@
 </div>
 
 <div class="container">
-    <br/>
-<section>
+<section id="first">
     <a class="anchor" name="events"></a><h1>Virtual Events</h1>
 
     <h4><a href="https://stonesoup.live/virtual">Stone Soup Virtual</a></h4>
@@ -463,8 +463,6 @@
 
     <script>
 
-
-    
 // HIDE NAV WHILE SCROLLING DOWN
 var didScroll;
 var lastScrollTop = 0;
@@ -510,18 +508,14 @@ function hasScrolled() {
 // // Dark Mode detector
     var time = new Date();
     var hour = time.getHours();
-    if ( sessionStorage.getItem('setDarkMode') === 'true') {
-          document.body.classList.add("dark-mode");
-        }
-    else if ( sessionStorage.getItem('setDarkMode') === 'false') {
-        document.body.classList.remove("dark-mode");
-    }
-    else if ((hour <= 8) || (hour >= 17)) {
+
+    if ((hour <= 8) || (hour >= 17)) {
         document.body.classList.add("dark-mode");
     }
     else {
       document.body.classList.remove("dark-mode");
     }
+
     </script>
 
   </body>
