@@ -40,6 +40,15 @@
             text-decoration: none;
         }
 
+        h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+            text-decoration: underline;
+        }
+
+        ul li {
+            text-indent: 10px;
+            margin-left: 1%;
+        }
+
         .dark-mode section a,.dark-mode section a:hover {
             border-bottom: 1px dashed grey;
         }
@@ -77,6 +86,16 @@
             width: 70px;
         }
 
+        .section-title {
+            text-align: center;
+            background: #2CBFFE;
+            color: white;
+            margin: 10px -15px;
+            padding: 10px 0;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
         .date {
             color: grey;
             font-weight: 100;
@@ -106,7 +125,7 @@
         }
 
         section {
-            margin-top: 50px;
+            margin-top: 40px;
         }
 
         section#first {
@@ -125,9 +144,25 @@
             font-family: 'Gotu', sans-serif;
         }
 
-        .st-bg { background:black; }
-.st-bg-today { background:yellow; border-left:1px solid yellow; border-right:1px solid yellow; }
-.st-dtitle { background:white; }
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+          height: 100px;
+          width: 100px;
+          background-image: none;
+        }
+
+        .carousel-control-next-icon:after
+        {
+          content: '>';
+          font-size: 60px;
+          color: #2cbffed4;
+        }
+
+        .carousel-control-prev-icon:after {
+          content: '<';
+          font-size: 60px;
+          color: #2cbffed4;
+        }
 
         .carousel {
             z-index: 1;
@@ -137,6 +172,7 @@
             font-family: 'Arapey',sans-serif;
             color: white;
             background: #2cbffed4;
+            border-radius: 10px;
 
         }
 
@@ -207,6 +243,11 @@
                 padding: 10px 0;
                 right: 0;
                 left: 0;
+                border-radius: 0;
+            }
+
+            .section-title {
+                border-radius: 0px;
             }
 
             #protected li, li {
@@ -249,6 +290,10 @@
 	      <li class="nav-item">
 	        <a class="nav-link" href="#self-care">Self-Care</a>
 	      </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#resources">Resources</a>
+          </li>
 	      
 	      <li class="nav-item">
 	        <a class="nav-link" href="#info">Info</a>
@@ -262,29 +307,25 @@
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
   </ol>
   <div class="carousel-inner">
     
     <div class="carousel-item active">
         <a href="https://www.gofundme.com/f/vashon-relief-fund-amid-covid19">
-      <img class="d-block w-100" src="IMG/vashon-relief.jpg" alt="Vashon relief fund amid COVID-19">
+      <img class="d-block w-100" src="IMG/vashon-relief2.jpg" alt="Vashon relief fund amid COVID-19">
       <div class="carousel-caption">
             <h2>Vashon Relief Fund Amid Covid-19</h2>
         </div></a>
     </div>
     <div class="carousel-item">
-      <a href="https://fantasticfungi.com/connect/"><img class="d-block w-100" src="IMG/fantastic-fungi-day.jpg" alt="Second slide" target="_blank"></a>
-    </div>
-    <div class="carousel-item">
         <a href="https://covidsupplyconnection.com">
-      <img class="d-block w-100" src="IMG/3d-printed-mask2.jpg" alt="Third slide">
+      <img class="d-block w-100" src="IMG/3d-printed-mask2.jpeg" alt="Third slide">
       <div class="carousel-caption">
             <h2>Help 3D-Print Face Shields</h2>
         </div></a>
     </div>
     <div class="carousel-item" style="background: grey;">
-      <a href="https://www.loveincovidtimes.com/"><img class="d-block w-100" src="IMG/loveincovidtimes.png" alt="Love in the time of covid" target="_blank" style="opacity: 50%;">
+      <a href="https://www.loveincovidtimes.com/"><img class="d-block w-100" src="IMG/loveincovidtimes2.png" alt="Love in the time of covid" target="_blank" style="opacity: 50%;">
       <div class="carousel-caption">
             <h2>#LoveinCovidTimes</h2>
         </div></a>
@@ -303,18 +344,20 @@
 
 <div class="container">
 <section id="first">
-    <a class="anchor" name="events"></a><h1>Virtual Events</h1>
+    <a class="anchor" name="events"></a><h1 class="section-title">Virtual Events</h1>
 
-    <h4><a href="https://stonesoup.live/virtual">Stone Soup Virtual</a></h4>
+    <h4><a href="https://stonesoup.live/virtual">Stone Soup Virtual Calendar:</a></h4>
 
     <iframe class="d-md-none" src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FLos_Angeles&amp;src=c3RvbmVzb3Vwem9vbUBnbWFpbC5jb20&amp;color=%23c53f00&amp;color=%237CB342&amp;color=%238E24AA&amp;mode=AGENDA&amp;showTitle=0&amp;showNav=1&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0" style="border-width:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
 
     <iframe class="d-none d-md-block" src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FLos_Angeles&amp;src=c3RvbmVzb3Vwem9vbUBnbWFpbC5jb20&amp;color=%238E24AA&amp;showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=1" style="border-width:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe><br/>
-    <p> Zoom, Google Hangouts, & House Party.
+    <p>Videochat is a great way to stay connected to your friends and family, host virtual events, and check-in with folks in this intense time. Videochat apps include Facetime, <a href="https://zoom.us/">Zoom</a>, <a href="https://hangouts.google.com/">Google Hangouts</a>, & <a href="https://www.houseparty.com/">House Party</a>.
+
+        <h3>Upcoming Virtual Events</h3>
         <ul>
 
-        <li>Fantastic Fungi Movie Night Mar. 26 - <a href="https://fantasticfungi.com/connect/">Fantastic Fungi Day</a></li>
         <li>Daily yoga sessions @ 9:30am & 4:30pm (PST) with my cousin @helengrandy on IG- @solfirejstreet</li>
+        <li>Free guided meditation and emotional processing every Tues 6PM + Thurs 9AM EST on IG Live - @findmywellbeing</li>
 
         </ul>
     </p>
@@ -322,26 +365,55 @@
 </section>
 <section>
 
-    <a class="anchor" name="help"></a><h1>How to Help</h1>
+    <a class="anchor" name="help"></a><h1 class="section-title">How to Help</h1>
 
-    <h3>Donate your money</h3>
+    <h3>1) Donate your money</h3>
     <ul>
-        <li><a href="https://www.gofundme.com/f/vashon-relief-fund-amid-covid19">Vahon Relief Fund</a></li>
-        <li><a href="https://grayarea.org/support/?mc_cid=e1dea8c571&mc_eid=583478a587">Save the Gray Area</a>
-        <li><a href="https://www.gofundme.com/f/support-our-asian-elders-during-covid19">Support our Asian Elders</a></li>
+
+        <h4>Local Fundraisers</h4>
+        <ul>
+            <li><a href="https://www.gofundme.com/f/vashon-relief-fund-amid-covid19">Vahon Relief Fund</a></li>
+            <li><a href="https://grayarea.org/support/?mc_cid=e1dea8c571&mc_eid=583478a587">Save the Gray Area</a>
+            <li><a href="https://www.gofundme.com/f/support-our-asian-elders-during-covid19">Support our Asian Elders</a></li>
+        </ul>
+
+        <br/>
+
+        <h4>National & Global Charities</h4>
+
+        <ul>
+            <li>Direct Relief</li>
+            <li>The CDC Foundation</li>
+            <li>Feeding America</li>
+            <li>UNICEF USA</li>
+            <li>Save the Children</li>
+            <li>American Red Cross</li>
+            <li>International Rescue Committee</li>
+            <li>International Medical Corps</li>
+            <li>Project HOPE</li>
+            <li>GiveDirectly</li>
+            <li>GlobalGiving Foundation</li>
+        </ul>
     </ul>
 
-    <h3>Donate your time</h3>
+    <h3>2) Donate your time</h3>
     <ul>
         <li><a href="https://helpwithcovid.com">Help With Covid.com</a></li>
     </ul>
 
-    <h3>Donate your goods</h3>
+    <h3>3) Donate your goods</h3>
     <ul>
         <li><a href="https://www.weshare.gift">WeShare gifting platform</a></li>
     </ul>
 
-    <h3>Donate your compute power</h3>
+    <h3>4) Donate your blood</h3>
+
+    <p>There's an ongoing critical need for blood due to the pandemic.</p>
+    <ul>
+        <li><a href="https://www.redcrossblood.org">Red Cross Blood.org</a></li>
+    </ul>
+
+    <h3>5) Donate your compute power</h3>
 
     <p>If you have a desktop computer sitting around, you can run a program that helps to fold proteins to find a cure for Covid-19 and other diseases. Be careful maxing out laptops.</p>
 
@@ -349,30 +421,30 @@
         <li><a href="https://foldingathome.org/2020/03/15/coronavirus-what-were-doing-and-how-you-can-help-in-simple-terms/">Folding @ Home</a>, YouTube — <a href="https://www.youtube.com/watch?v=KU4qOebhkfs">Here's How YOU Can Help Find a Cure for COVID-19! <span class="date">(Mar. 22)</span></a></li>
     </ul>
 
-    <h2>Make masks</h2>
+    <h3>6) Make masks</h3>
     <p>A whole cottage industry has stepped up in the effort to make sure we don't fall short on masks and face shields.</p>
 
-    <h4>3D Printing</h4>
-        <ul>
-            <li><a href="https://copper3d.com/hackthepandemic/">Print Masks</a></li>
-            <li><a href="https://covidsupplyconnection.com/">Print Face Shields</a></li>
-        </ul>
+    <ul>
 
-    <h4>Sew Masks</h4>
-        <ul>
-            <li>YouTube — <a href="https://www.youtube.com/watch?v=4FB--BOyTiU">How to Sew a Medical Face Mask Tutorial</a></li>
-        </ul>
+        <h4>3D Printing</h4>
+            <ul>
+                <li><a href="https://copper3d.com/hackthepandemic/">Print Masks</a></li>
+                <li><a href="https://covidsupplyconnection.com/">Print Face Shields</a></li>
+            </ul>
+
+        <h4>Sew Masks</h4>
+            <ul>
+                <li>YouTube — <a href="https://www.youtube.com/watch?v=4FB--BOyTiU">How to Sew a Medical Face Mask Tutorial</a></li>
+                <li><a href="https://www.vumc.org/coronavirus/how-donate-hand-sewn-face-masks">How to Donate Hand Sewn Face Masks & Instructions</a></li>
+            </ul>
+
+    </ul>
 
 </section>
 <section>
 
-    <a class="anchor" name="self-care"></a><h1>Self-care</h1>
+    <a class="anchor" name="self-care"></a><h1 class="section-title">Self-care</h1>
 
-    <br/>
-
-    <h4><a href="Morning Brew's Guide to Living Your Best Quarantined Life.pdf">Morning Brew's Guide to Living Your Best Quarantine Life</a></h4>
-
-    <br/>
 
     <h3>Daily Quarantine Questions</h3>
 
@@ -382,12 +454,16 @@
         <li>What expectations of "normal" am I letting go of today?</li>
         <li>How am I getting outside today?</li>
         <li>What beauty am I either creating, cultivating, or inviting in today?</li>
+
+        <p><br/>
+            - Created by <a style="text-decoration: underline;" href="https://greatergood.berkeley.edu/article/item/six_daily_questions_to_ask_yourself_in_quarantine">Brooke Anderson</a></p>
+
     </ul>
 
  <ul class="protected">
         <h3>Stay Protected in Quarantine</h3>
 
-        <li>Socially distance six feet from other people.</li>
+        <li>Socially distance six feet from others.</li>
         <li>Wash hands often and well for 20 seconds.</li>
         <li>Use soap and water or an alcohol-based hand sanitizer.</li>
         <li>Avoid touching your face with unwashed hands.</li>
@@ -395,33 +471,53 @@
         <li>Keep your distance from anyone who has cold or flu-like symptoms.</li>
         <li>Contact your health care provider if you have a fever, cough or difficulty breathing.</li>
         <li>Limit trips to stores for essentials only.</li>
+        <li>Disinfect frequently touched hard surfaces (doorknobs, counters, etc.) using bleach (1/3 cup per gallon of water), a 70% alcohol solution, or other disinfectants recommended by the EPA.</li>
 
     </ul>
+
+    <h3>Health & Wellbeing</h3>
      <ul>
+        <li>Elemental - <a href="https://elemental.medium.com/coronavirus-and-loneliness-are-conspiring-against-us-3fcc93444ecf">A Call to Arms Against the Loneliness Epidemic <span class="date">(Mar. 20)</span></a>, <a href="https://elemental.medium.com/science-explains-why-uncertainty-is-so-hard-on-our-brain-6ac75938662">Science Explains Why Uncertainty Is So Hard on Our Brain <span class="date">(Mar. 19)</span></a>, <a href="https://elemental.medium.com/the-best-workout-apps-to-keep-you-fit-during-the-coronavirus-lockdown-48152759b12d">The Best Workout Apps to Keep You Fit During the Lockdown  <span class="date">(Mar. 19)</span></a></li>
          <li>Jewish Philanthropy - <a href="http://go.pardot.com/e/811723/an-opportunity-for-connection-/dmbs/5318477?h=7oFB40rgH8pXA5BO-WW5aA5kT71LMakaOrpIxkb0JQQ">A Moment of Crists Can Be An Opportunity For Connection</a></li>
          <li>Repair the World & Amplifier - <a href="http://go.pardot.com/e/811723/caring-for-sick/dmbv/5318477?h=7oFB40rgH8pXA5BO-WW5aA5kT71LMakaOrpIxkb0JQQ">All People Are Responsible for One Another: A Resource on Caring for the Sick in Times of Crisis</a></li>
-         <li>Jerusalem Post - <a href="http://go.pardot.com/e/811723/tir-crazy-in-quarantine-620767/dmbx/5318477?h=7oFB40rgH8pXA5BO-WW5aA5kT71LMakaOrpIxkb0JQQ">Coronavirus: 7 Tips on Avoiding Going Stir Crazy in Quarantine</a></li>
-         <li>My Wellbeing - <a href="http://go.pardot.com/e/811723/p-B9pF6agA1qU-/dmc2/5318477?h=7oFB40rgH8pXA5BO-WW5aA5kT71LMakaOrpIxkb0JQQ">Reducing Anxiety During Coronavirus</a></li>
+         <li>Jerusalem Post - <a href="http://go.pardot.com/e/811723/tir-crazy-in-quarantine-620767/dmbx/5318477?h=7oFB40rgH8pXA5BO-WW5aA5kT71LMakaOrpIxkb0JQQ">Coronavirus: 7 Tips on Avoiding Going Stir Crazy in Quarantine <span class="date">(Mar. 12)</span></a></li>
+         <li>My Wellbeing - <a href="http://go.pardot.com/e/811723/p-B9pF6agA1qU-/dmc2/5318477?h=7oFB40rgH8pXA5BO-WW5aA5kT71LMakaOrpIxkb0JQQ">Reducing Anxiety During Coronavirus <span class="date">(Mar. 12)</span></a></li>
 
         <li>NPR – <a href="https://www.npr.org/sections/goatsandsoda/2020/02/26/809650625/a-guide-how-to-prepare-your-home-for-coronavirus?utm_source=npr_newsletter&utm_medium=email&utm_content=20200227&utm_term=4427191&utm_campaign=news&utm_id=3267480&orgid=286">A Guide: How to Prepare Your Home for Coronavirus <span class="date">(Feb. 26)</span></a></li>
-        <li><a href="https://www.slideshare.net/InSTEDD/pandemic-preparedness-covid19-update-citizens-guide">Pandemic Preparedness COVID-19 Update – Citizens Guide <span class="date">(Mar. 11)</span></a></li>
+<!--         <li><a href="https://www.slideshare.net/InSTEDD/pandemic-preparedness-covid19-update-citizens-guide">Pandemic Preparedness COVID-19 Update – Citizens Guide <span class="date">(Mar. 11)</span></a></li> -->
     </ul>
+
+    <h5><a href="https://docs.google.com/spreadsheets/d/1KlaNEyNHhiIjscdpZb0F8wYy7jQ2Q2Bz7sV_8oDsu0c/edit?usp=sharing">Home Workouts!</a></h5>
+
+    <br/>
+
+    <h5><a href="Morning Brew's Guide to Living Your Best Quarantined Life.pdf">Morning Brew's Guide to Living Your Best Quarantine Life ⇣</a></h5>
+
+    <br/>
+
+    <h5><a href="sanity-savers-confined-recommendations.pdf">Sanity Savers ⇣</a></h5>
 
   </section>
   <section> 
 
-    <a class="anchor" name="info"></a><h2>COVID-19 Resources</h2>
+    <a class="anchor" name="resources"></a><h2 class="section-title">Getting Support & Resources</h2>
 
-    <p><ul>
-        <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/index.html">CDC.gov</a></li>
-        <li>The Hearth – <a href="https://docs.google.com/document/d/11tmQGeN7ULKMoHWuyQN-N4oUWpzPG0aC7gsYrWSg3PM/edit">Coronavirus Planning <span class="date">(March)</span></a></li>
+    <ul>
+        
+        <li>The Hearth – <a href="https://docs.google.com/document/d/11tmQGeN7ULKMoHWuyQN-N4oUWpzPG0aC7gsYrWSg3PM/edit">Coronavirus Planning <span class="date">(March)</span></a>, <a href="Coronavirus Health Guidelines for Communal Houses - The Hearth.pdf">Health Guidelines for Communal Houses</a></li>
         <li><a href="https://docs.google.com/document/d/1htY4q6Aq2cg1OU7p2Q6i9x8EZy-aOxgLooUp6kgxZzw/edit">COVID-19 Freelance Artist Resources</a></li>
         <li><a href="https://docs.google.com/spreadsheets/d/1oN7WLN4lX3W86Wb283Bot0xzYgP8YS-JrAlWKJ89YwA/edit?mc_cid=9b36ab48a6&mc_eid=7cd39332e6&fbclid=IwAR1iQ_t5oEG1CnhY21gdMxBtYOQhjgPIiwWBVdRbGIvNWUbMH7wcF13ykAc#gid=2073335849">Additional Resources while Schools are Shut Down</a></li>
-    </ul></p>
+        
+    </ul>
+
+    <h5>List of Lists – <a href="COVID-19 Resources List of Lists 3.24.pdf">Local & National Resources ⇣</a></h5>
+
+    <a class="anchor" name="info"></a><h2 class="section-title">COVID-19 Info</h2>
 
     <h3>Basic Primer</h3>
 
     <ul>
+            <li>CDC – <a href="https://www.cdc.gov/coronavirus/2019-ncov/if-you-are-sick/steps-when-sick.html">What To Do If You Are Sick</a>, <a href="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html">What Are The Symptoms?</a>, <a href="https://www.cdc.gov/coronavirus/2019-ncov/prepare/transmission.html">How It Spreads</a>, <a href="https://www.cdc.gov/coronavirus/2019-ncov/prepare/prevention.html">How to Protect Yourself</a>, <a href="https://www.cdc.gov/coronavirus/2019-ncov/specific-groups/high-risk-complications.html">Are You At High Risk?</a>, <a href="https://www.cdc.gov/coronavirus/2019-ncov/travelers/travel-in-the-us.html">Can I still travel within the US?</a></li>
             <li>Kurzgesagt — <a href="https://www.youtube.com/watch?v=BtN-goy9VOY">The Coronavirus Explained & What You Should Do <span class="date">(Mar. 19)</span></a></li>
             <li>Infographics Show — <a href="https://www.youtube.com/watch?v=gaznNkmdd-w">The Most Effective Way to Kill a Virus <span class="date">(Mar. 22)</span></a></li>
             <li>The Guardian  – <a href="https://www.theguardian.com/commentisfree/2020/mar/12/science-soap-kills-coronavirus-alcohol-based-disinfectants">The Science of How Soap Kills the Coronavirus <span class="date">(Mar. 12)</span></a></li>
@@ -467,7 +563,7 @@
 
 <footer>
 
-    <p>Breathe. This too shall pass. <a href="http://open.spotify.com/user/recalcitrantid/playlist/3ODnsWjOJeD9xgcEbMcyVW" target="_blank"><img src="IMG/play3.png" alt="Play spotify playlist covid beats"/ style="height: 25px"></a></P>
+<!--     <p>Breathe. This too shall pass. <a href="http://open.spotify.com/user/recalcitrantid/playlist/3ODnsWjOJeD9xgcEbMcyVW" target="_blank"><img src="IMG/play3.png" alt="Play spotify playlist covid beats"/ style="height: 25px"></a></P> -->
 
 
 </footer>
@@ -536,7 +632,7 @@ function hasScrolled() {
     var time = new Date();
     var hour = time.getHours();
 
-    if ((hour <= 8) || (hour >= 19)) {
+    if ((hour <= 5) || (hour >= 19)) {
         document.body.classList.add("dark-mode");
     }
     else {
